@@ -1,0 +1,27 @@
+@import "_variables";
+
+///////////////////////////////////////////
+// Media Queries mixin
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      544px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "small-desktop":992px,
+    "tablet-wide":  1024px,
+    "desktop":      1200px,
+    "desktop-wide": 1600px,
+    "stupid-wide": 2100px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

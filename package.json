@@ -1,0 +1,32 @@
+{
+  "name": "cloudcodestandards",
+  "version": "1.0.0",
+  "description": "cloud code standards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudconstruct-dev/code-standards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloudconstruct-dev/code-standards/issues"
+  },
+  "homepage": "https://github.com/cloudconstruct-dev/code-standards#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "node-gyp": "^6.0.1",
+    "node-sass": "^4.13.0"
+  }
+}
