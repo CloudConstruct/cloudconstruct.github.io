@@ -313,14 +313,14 @@ div {
 		width: 100%;
 		height: 100%;
 
-		background-color: rgba($play-color-off-black, .6);
+		background-color: rgba($play-color-off-black, .7);
 
 		&--money {
 			@extend .section__overlay;
 
 			z-index: 2;
 
-			background-color: rgba($play-color-green-dark, .2);
+			background-color: rgba($play-color-green-dark, .4);
 		}
 
 		&--props {
@@ -328,7 +328,7 @@ div {
 
 			z-index: 2;
 
-			background-color: rgba($play-color-blue-lighter, .2);
+			background-color: rgba($play-color-blue-lighter, .4);
 		}
 
 		&--pennies {
@@ -336,7 +336,7 @@ div {
 
 			z-index: 2;
 
-			background-color: rgba($play-color-yellow, .2);
+			background-color: rgba($play-color-yellow, .4);
 		}
 	}
 
