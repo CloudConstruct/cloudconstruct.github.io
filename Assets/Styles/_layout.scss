@@ -238,7 +238,7 @@ div {
 
 		padding: 5vw;
 
-		background-color: rgba($play-color-blue-gray, .9);
+		background-color: rgba($play-color-blue-gray, .8);
 		box-shadow: $play-content-box-shadow;
 
 		flex-wrap: wrap;
@@ -320,7 +320,7 @@ div {
 
 			z-index: 2;
 
-			background-color: rgba($play-color-green-dark, .4);
+			background-color: rgba($play-color-green-dark, .3);
 		}
 
 		&--props {
@@ -328,7 +328,7 @@ div {
 
 			z-index: 2;
 
-			background-color: rgba($play-color-blue-lighter, .4);
+			background-color: rgba($play-color-blue-lighter, .3);
 		}
 
 		&--pennies {
@@ -336,7 +336,7 @@ div {
 
 			z-index: 2;
 
-			background-color: rgba($play-color-yellow, .4);
+			background-color: rgba($play-color-yellow, .3);
 		}
 	}
 

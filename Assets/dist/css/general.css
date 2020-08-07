@@ -190,7 +190,7 @@ div {
     z-index: 5;
     width: 100%;
     padding: 5vw;
-    background-color: rgba(69, 91, 102, 0.9);
+    background-color: rgba(69, 91, 102, 0.8);
     -webkit-box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.5);
     -ms-flex-wrap: wrap;
@@ -248,13 +248,13 @@ div {
     background-color: rgba(14, 17, 20, 0.7); }
     .section__overlay--money {
       z-index: 2;
-      background-color: rgba(144, 245, 29, 0.4); }
+      background-color: rgba(144, 245, 29, 0.3); }
     .section__overlay--props {
       z-index: 2;
-      background-color: rgba(166, 219, 245, 0.4); }
+      background-color: rgba(166, 219, 245, 0.3); }
     .section__overlay--pennies {
       z-index: 2;
-      background-color: rgba(245, 230, 29, 0.4); }
+      background-color: rgba(245, 230, 29, 0.3); }
   .section__icon, .section__icon--money, .section__icon--props, .section__icon--pennies {
     display: inline-block;
     position: relative;
