@@ -51,7 +51,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: #F5F5F5;
+  background-color: #A6DBF5;
   color: #F5F5F5;
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
@@ -392,6 +392,79 @@ div {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.demo-dot {
+  position: absolute;
+  bottom: 20vw;
+  left: -10vw;
+  z-index: 9;
+  -webkit-animation: xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  animation: xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1); }
+
+.demo-dot::after {
+  content: '';
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 20px;
+  -webkit-animation: yAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  animation: yAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  background-image: url("https://bestanimations.com/Animals/Insects/Butterflys/butterfly-animated.gif");
+  background-size: cover; }
+
+@-webkit-keyframes yAxis {
+  0% { }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px); }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px); } }
+
+@keyframes yAxis {
+  0% { }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px); }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px); } }
+
+@-webkit-keyframes xAxis {
+  0% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
+  49% {
+    -webkit-transform: translateX(110vw) scaleX(-1);
+    transform: translateX(110vw) scaleX(-1); }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.7, 0.6, 0, 0);
+    animation-timing-function: cubic-bezier(0.7, 0.6, 0, 0);
+    -webkit-transform: translateX(110vw) scaleX(1);
+    transform: translateX(110vw) scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); } }
+
+@keyframes xAxis {
+  0% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
+  49% {
+    -webkit-transform: translateX(110vw) scaleX(-1);
+    transform: translateX(110vw) scaleX(-1); }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.7, 0.6, 0, 0);
+    animation-timing-function: cubic-bezier(0.7, 0.6, 0, 0);
+    -webkit-transform: translateX(110vw) scaleX(1);
+    transform: translateX(110vw) scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); } }
 
 .header {
   position: absolute;

@@ -62,7 +62,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: $play-color-off-white;
+    background-color: $play-color-blue-lighter;
     color: $play-color-off-white;
 
     font-family: 'Roboto', sans-serif;
@@ -338,7 +338,7 @@ div {
 
 			background-color: rgba($play-color-yellow, .3);
 		}
-		
+
 	}
 
 	&__icon {
@@ -508,4 +508,61 @@ div {
 	left: 50%;
 
 	transform: translate(-50%, -50%);
+}
+
+
+
+.demo-dot {
+	position: absolute;
+  bottom: 20vw;
+	left: -10vw;
+	z-index: 9;
+
+  animation: xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+}
+
+.demo-dot::after {
+  content: '';
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 20px;
+	animation: yAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+	
+	background-image: url('https://bestanimations.com/Animals/Insects/Butterflys/butterfly-animated.gif');
+	background-size: cover;
+}
+
+@keyframes yAxis {
+	0% {
+		//transform: scaleX(-1);
+	}
+
+  50% {
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+		transform: translateY(-100px);
+	}
+	
+	100% {
+		transform: translateY(-100px);
+	}
+}
+
+@keyframes xAxis {
+	0% {
+		transform: scaleX(-1);
+	}
+
+	49% {
+		transform: translateX(110vw) scaleX(-1);
+	}
+
+  50% {
+    animation-timing-function: cubic-bezier(0.7, 0.6, 0, 0);
+    transform: translateX(110vw)  scaleX(1);
+	}
+
+	100% {
+		transform: scaleX(1);
+	}
 }
