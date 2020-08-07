@@ -62,7 +62,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: $play-color-gray-dark;
+    background-color: $play-color-off-white;
     color: $play-color-off-white;
 
     font-family: 'Roboto', sans-serif;
@@ -94,10 +94,12 @@ div {
 	position: relative;
 	overflow: hidden;
 
-	margin-bottom: $space-lg;
+	margin-bottom: 2vw;
+	height: 60vh;
 
 	@include mq('tablet') {
-		margin-bottom: 3vw;
+		margin-bottom: 1vw;
+		height: auto;
 	}
 	
 	&__background {
@@ -113,7 +115,12 @@ div {
 		align-items: center;
 
 		&-video {
-			width: 100%;
+			height: 100%;
+
+			@include mq('tablet') {
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 	
@@ -130,20 +137,84 @@ div {
 		background-size: cover;
 		background-position: bottom center;
 	}
+
+	&__body {
+		position: absolute;
+		bottom: 11vw;
+		right: 0;
+		z-index: 8;
+		display: flex;
+
+		width: 95vw;
+		//height: 60%;
+		height: auto;
+		padding: 4vw;
+
+		background-color: rgba($play-color-gray-dark, .9);
+		border-radius: 2vw 0 0 2vw;
+
+		align-content: flex-end;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+
+		@include mq('tablet') {
+			bottom: 7vw;
+
+			width: 75vw;
+			padding: 2vw;
+		}
+
+		h2 {
+			color: $play-color-off-white;
+
+			font-weight: 900;
+			text-align: left;
+			font-size: 6.1vw;
+			//text-shadow: $play-color-off-black 0 0 14px;
+			line-height: 1;
+			letter-spacing: -.1vw;
+
+			@include mq('tablet') {
+				font-size: 5vw;
+			}
+		}
+
+		p {
+			margin-top: 2vw;
+			margin-bottom: 0;
+
+			color: $play-color-yellow;
+			
+			text-align: left;
+			//text-shadow: $play-color-off-black 0 0 5px;
+			font-size: 3.7vw;
+			line-height: 1.3;
+
+			@include mq('tablet') {
+				font-size: 1.7vw;
+				line-height: 1;
+			}
+		}
+	}
 }
 
 // Section
 .section {
 	display: flex;
 	position: relative;
+	overflow: hidden;
 
 	width: 100%;
-	padding: $space-sm;
-	margin-bottom: $space-lg;
+	padding: 15vw 4vw;
+	margin-bottom: 2vw;
 
 	@include mq('tablet') {
-		padding: 3vw;
-		margin-bottom: 6vw;
+		padding: 7vw 5vw;
+		margin-bottom: 1vw;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
 	}
 	
 	&--text-right {
@@ -159,18 +230,23 @@ div {
 	}
 
 	&__text {
+		display: flex;
 		position: relative;
-		z-index: 3;
+		z-index: 5;
 
 		width: 100%;
 
-		padding: $space-sm;
+		padding: 5vw;
 
 		background-color: rgba($play-color-blue-gray, .9);
+		box-shadow: $play-content-box-shadow;
+
+		flex-wrap: wrap;
+		justify-content: center;
 
 		@include mq('tablet') {
-			width: 50%;
-			padding: 6vw;
+			width: 60%;
+			padding: 3vw 3vw 6vw;
 		}
 
 		h3 {
@@ -180,48 +256,50 @@ div {
 
 			font-weight: 700;
 			text-align: center;
-			font-size: 24px;
+			font-size: 6vw;
 			text-transform: none;
+			line-height: 1.1;
 
 			@include mq('tablet') {
 				margin-bottom: 3vw;
-				font-size: 2.5vw;
+				margin-right: 4vw;
+
+				font-size: 3vw;
+				text-align: left;
 			}
 
-			@include mq('small-desktop') {
-				//font-size: 32px;
+			&.money {
+				color: $play-color-green-dark;
 			}
 
-			@include mq('desktop') {
-				//font-size: 38px;
+			&.props {
+				color: $play-color-blue-lighter;
 			}
 
-			@include mq('desktop-wide') {
-				//font-size: 42px;
+			&.pennies {
+				color: $play-color-yellow;
 			}
 		}
 
 		p {
-			font-size: 14px;
+			margin: 0;
+
+			font-size: 3.5vw;
 			line-height: 1.7;
 			text-transform: none;
 			text-align: center;
 
 			@include mq('tablet') {
-				//font-size: 16px;
 				font-size: 1.3vw;
+				text-align: left;
 			}
+		}
 
-			@include mq('small-desktop') {
-				//font-size: 18px;
-			}
+		&-body {
+			@include mq('tablet') {
+				display: flex;
 
-			@include mq('desktop') {
-				//font-size: 20px;
-			}
-
-			@include mq('desktop-wide') {
-				//font-size: 24px;
+				width: 100%;
 			}
 		}
 	}
@@ -230,17 +308,203 @@ div {
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 2;
+		z-index: 3;
 
 		width: 100%;
 		height: 100%;
 
-		background-color: rgba($play-color-off-black, .5);
+		background-color: rgba($play-color-off-black, .6);
+
+		&--money {
+			@extend .section__overlay;
+
+			z-index: 2;
+
+			background-color: rgba($play-color-green-dark, .2);
+		}
+
+		&--props {
+			@extend .section__overlay;
+
+			z-index: 2;
+
+			background-color: rgba($play-color-blue-lighter, .2);
+		}
+
+		&--pennies {
+			@extend .section__overlay;
+
+			z-index: 2;
+
+			background-color: rgba($play-color-yellow, .2);
+		}
 	}
+
+	&__icon {
+		display: inline-block;
+		position: relative;
+
+		width: 8vw;
+		height: 8vw;
+		padding: 1vw;
+		margin-bottom: 3vw;
+		
+		border: .5vw solid $play-color-green-dark;
+		border-radius: 999px;
+
+		&--money {
+			@extend .section__icon;
+
+			border-color: $play-color-green-dark;
+		}
+
+		&--props {
+			@extend .section__icon;
+
+			border-color: $play-color-blue-lighter;
+		}
+
+		&--pennies {
+			@extend .section__icon;
+
+			border-color: $play-color-yellow;
+		}
+	}
+
+	&__back-text {
+		display: flex;
+		position: absolute;
+		right: -2vw;
+		bottom: -2vw;
+		z-index: 4;
+		opacity: .4;
+
+		height: 25vw;
+		width: 65vw;
+
+		color: $play-color-off-white;
+
+		font-size: 12vw;
+		font-weight: 900;
+		//white-space: nowrap;
+		text-align: right;
+		line-height: .8;
+		letter-spacing: -.5vw;
+
+		align-items: flex-end;
+		justify-content: flex-end;
+
+		&--left {
+			@extend .section__back-text;
+
+			left: -2vw;
+			right: auto;
+
+			text-align: left;
+
+			justify-content: flex-start;
+		}
+	}
+
+	&--signup {
+		@extend .section;
+
+		padding: 20vw 0;
+
+		background-color: $play-color-blue-gray;
+
+		text-align: center;
+
+		justify-content: center;
+
+		@include mq('tablet') {
+			padding: 12vw 0;
+		}
+
+		div {
+			position: relative;
+			z-index: 5;
+		}
+
+		p {
+			margin-bottom: 4vw;
+
+			font-size: 4.5vw;
+			font-weight: 700;
+			
+			@include mq('tablet') {
+				margin-bottom: 4vw;
+
+				font-size: 2.5vw;
+			}
+		}
+
+		input {
+			padding: 3vw;
+			width: 80vw;
+
+			border: none;
+			border-radius: 1vw;
+			color: $play-color-blue-gray;
+
+			font-size: 4vw;
+
+			@include mq('tablet') {
+				padding: 1vw;
+				max-width: none;
+				width: 40vw;
+
+				border-radius: .5vw;
+
+				font-size: 2vw;
+			}
+		}
+	}
+}
+
+.background-1 {
+	background-image: url('../../Images/playerdise1.jpg');
+	background-size: cover;
+	background-position: center center;
 }
 
 .background-2 {
 	background-image: url('../../Images/playerdise2.jpg');
 	background-size: cover;
 	background-position: center center;
+}
+
+.background-3 {
+	background-image: url('../../Images/playerdise3.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.icon-money {
+	@include money-icon($play-color-green-dark, 5vw, 5vw);
+	position: absolute;
+	top: 47%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+.icon-props {
+	@include props-icon($play-color-blue-lighter, 6vw, 6vw);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+.icon-pennies {
+	@include pennies-icon($play-color-yellow, 6vw, 6vw);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
 }

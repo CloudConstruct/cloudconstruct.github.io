@@ -2,14 +2,25 @@
 @import "_mixins";
 
 footer {
-	padding: $space-xs;
+	padding: 4vw;
 
-	background-color: $play-color-blue-light;
-	color: $play-color-off-black;
+	background-color: $play-color-off-black;
+	color: $play-color-off-white;
 
 	text-align: center;
 
+	@include mq('tablet') {
+		padding: 1.5vw;
+	}
+
 	p {
 		margin: 0;
+
+		font-size: 3vw;
+		line-height: 1;
+
+		@include mq('tablet') {
+			font-size: 1vw;
+		}
 	}
 }
