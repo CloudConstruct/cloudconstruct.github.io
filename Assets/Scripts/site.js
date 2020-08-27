@@ -92,18 +92,16 @@ $(document).ready(function(){
 	function videoSwitch() {
 		var today = new Date();
 		var time = today.getHours();
-
-		console.log(time);
+		var $videoDay = $('#videoDay');
+		var $videoNight = $('#videoNight');
 
 		// Having certain video show during day vs night
 		if (time > 7 && time < 19) {
-			console.log("Time is day");
-			$('#videoDay').css("display", "block");
-			$('#videoNight').css("display", "none");
+			$videoDay.css("display", "block");
+			$videoNight.css("display", "none");
 		} else {
-			console.log("Time is night");
-			$('#videoNight').css("display", "block");
-			$('#videoDay').css("display", "none");
+			$videoNight.css("display", "block");
+			$videoDay.css("display", "none");
 		}
 	};
 	videoSwitch();
