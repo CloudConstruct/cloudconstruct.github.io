@@ -96,7 +96,7 @@ $(document).ready(function(){
 		var $videoNight = $('#videoNight');
 
 		// Having certain video show during day vs night
-		if (time > 7 && time < 19) {
+		if (time > 6 && time < 19) {
 			$videoDay.css("display", "block");
 			$videoNight.css("display", "none");
 		} else {
