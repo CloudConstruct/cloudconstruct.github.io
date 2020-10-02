@@ -442,7 +442,8 @@ div {
 
 		input {
 			padding: 3vw;
-			width: 80vw;
+			width: 40vw;
+			margin-right: 5vw;
 
 			border: none;
 			border-radius: 1vw;
@@ -454,6 +455,7 @@ div {
 				padding: 1vw;
 				max-width: none;
 				width: 40vw;
+				margin-right: 2vw;
 
 				border-radius: .5vw;
 
@@ -564,5 +566,93 @@ div {
 
 	100% {
 		transform: scaleX(1);
+	}
+}
+
+.subscribe {
+	margin-bottom: 2vw;
+	padding: 8vw 4vw;
+
+	background-color: $play-color-gray-darker;
+	color: $play-color-off-white;
+
+	font-size: 5vw;
+	font-weight: 900;
+
+	@include mq('tablet') {
+		display: flex;
+
+		margin-bottom: 1vw;
+		padding: 5vw;
+
+		align-items: center;
+		justify-content: center;
+	}
+
+	h3 {
+		margin-bottom: 3vw;
+		font-size: 5vw;
+
+		@include mq('tablet') {
+			margin-bottom: 0;
+
+			font-size: 1.7vw;
+		}
+	}
+
+	input {
+		padding: 3vw;
+		width: 50vw;
+
+		border: none;
+		border-radius: 1vw;
+		color: $play-color-blue-gray;
+
+		font-size: 4vw;
+
+		@include mq('tablet') {
+			padding: 1vw;
+			max-width: none;
+			width: 40vw;
+			margin-left: 2vw;
+
+			border-radius: .5vw;
+
+			font-size: 1.7vw;
+		}
+	}
+
+	button {
+		margin-left: 2vw;
+	}
+}
+
+.button {
+	&--primary {
+		padding: 3vw 5vw;
+
+		color: $play-color-blue-lighter;
+		background-color: transparent;
+		border: .7vw solid $play-color-blue-lighter;
+		border-radius: 999px;
+
+		font-family: "Lato", sans-serif;
+		font-weight: 900;
+
+		cursor: pointer;
+		transition: all 200ms ease-in-out;
+
+		&:hover {
+			color: $play-color-blue-gray;
+			background-color: $play-color-blue-lighter;
+		}
+		
+		@include mq('tablet') {
+			padding: 1vw 3vw;
+
+			border: .3vw solid $play-color-blue-lighter;
+
+			font-size: 1.7vw;
+		}
 	}
 }
