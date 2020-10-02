@@ -4,15 +4,18 @@ var gulp = require('gulp'),
     concat = require("gulp-concat"),
     sass = require("gulp-sass"),
     autoprefixer = require('gulp-autoprefixer'),
-    cleanCSS = require("gulp-clean-css");
-
+		cleanCSS = require("gulp-clean-css");
+		cachebust = require('gulp-cache-bust');
 
 // JS
 gulp.task('js', gulp.parallel(function () {
     // gulp.src(['./src/js/vendor/**/*.*'])
     //     .pipe(gulp.dest('./js/vendor/'));
     return gulp.src(['./Assets/Scripts/site.js'])
-        .pipe(concat('main.js'))
+				.pipe(concat('main.js'))
+				.pipe(cachebust({
+					type: 'timestamp'
+				}))
         .pipe(gulp.dest('./Assets/dist/js/'));
 }));
 
@@ -26,7 +29,10 @@ gulp.task('sass', gulp.parallel(function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(sourcemaps.write('.'))
+				.pipe(sourcemaps.write('.'))
+				.pipe(cachebust({
+					type: 'timestamp'
+				}))
         .pipe(gulp.dest('./Assets/dist/css/'));
 }));
 
