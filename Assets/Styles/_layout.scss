@@ -440,10 +440,9 @@ div {
 			}
 		}
 
-		input {
+		input[type="email"] {
 			padding: 3vw;
 			width: 40vw;
-			margin-right: 5vw;
 
 			border: none;
 			border-radius: 1vw;
@@ -455,11 +454,69 @@ div {
 				padding: 1vw;
 				max-width: none;
 				width: 40vw;
-				margin-right: 2vw;
 
 				border-radius: .5vw;
 
 				font-size: 2vw;
+			}
+		}
+
+		form {
+			display: flex;
+	
+			align-items: center;
+		}
+	
+		.button--primary {
+			margin-left: 2vw;
+		}
+	
+		.mce-responses {
+			display: flex;
+			position: relative;
+	
+			width: 50vw;
+	
+			flex-wrap: wrap;
+	
+			@include mq('tablet') {
+				width: 40vw;
+			}
+		}
+	
+		.mce-error-response {
+			margin-top: 4vw;
+			width: 100%;
+	
+			color: $play-color-red;
+	
+			font-size: 14px;
+			text-align: center;
+	
+			@include mq('tablet') {
+				position: absolute;
+				top: 100%;
+				left: 0;
+	
+				margin-top: 1vw;
+			}
+		}
+	
+		.mce-success-response {
+			margin-top: 4vw;
+			width: 100%;
+			
+			color: $play-color-green-dark;
+	
+			font-size: 24px;
+			text-align: center;
+	
+			@include mq('tablet') {
+				position: absolute;
+				top: 100%;
+				left: 0;
+	
+				margin-top: 1vw;
 			}
 		}
 	}
@@ -600,9 +657,9 @@ div {
 		}
 	}
 
-	input {
+	input[type="email"] {
 		padding: 3vw;
-		width: 50vw;
+		width: 100%;
 
 		border: none;
 		border-radius: 1vw;
@@ -613,17 +670,72 @@ div {
 		@include mq('tablet') {
 			padding: 1vw;
 			max-width: none;
-			width: 40vw;
-			margin-left: 2vw;
-
+			width: 100%;
+			
 			border-radius: .5vw;
 
 			font-size: 1.7vw;
 		}
 	}
 
-	button {
+	form {
+		display: flex;
+
+		align-items: center;
+	}
+
+	.button--primary {
 		margin-left: 2vw;
+	}
+
+	.mce-responses {
+		display: flex;
+		position: relative;
+
+		width: 50vw;
+
+		flex-wrap: wrap;
+
+		@include mq('tablet') {
+			width: 40vw;
+			margin-left: 2vw;
+		}
+	}
+
+	.mce-error-response {
+		margin-top: 4vw;
+		width: 100%;
+
+		color: $play-color-red;
+
+		font-size: 14px;
+		text-align: center;
+
+		@include mq('tablet') {
+			position: absolute;
+			top: 100%;
+			left: 0;
+
+			margin-top: 1vw;
+		}
+	}
+
+	.mce-success-response {
+		margin-top: 4vw;
+		width: 100%;
+		
+		color: $play-color-green-dark;
+
+		font-size: 24px;
+		text-align: center;
+
+		@include mq('tablet') {
+			position: absolute;
+			top: 100%;
+			left: 0;
+
+			margin-top: 1vw;
+		}
 	}
 }
 
