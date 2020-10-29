@@ -440,83 +440,15 @@ div {
 			}
 		}
 
-		input[type="email"] {
-			padding: 3vw;
-			width: 40vw;
-
-			border: none;
-			border-radius: 1vw;
-			color: $play-color-blue-gray;
-
-			font-size: 4vw;
-
-			@include mq('tablet') {
-				padding: 1vw;
-				max-width: none;
-				width: 40vw;
-
-				border-radius: .5vw;
-
-				font-size: 2vw;
-			}
-		}
-
-		form {
-			display: flex;
-	
-			align-items: center;
-		}
-	
-		.button--primary {
-			margin-left: 2vw;
-		}
-	
-		.mce-responses {
-			display: flex;
-			position: relative;
-	
-			width: 50vw;
-	
-			flex-wrap: wrap;
-	
-			@include mq('tablet') {
-				width: 40vw;
-			}
-		}
-	
-		.mce-error-response {
-			margin-top: 4vw;
+		.iframe {
 			width: 100%;
-	
-			color: $play-color-red;
-	
-			font-size: 14px;
-			text-align: center;
+			min-height: 7vw;
+			max-height: 18vw;
 	
 			@include mq('tablet') {
-				position: absolute;
-				top: 100%;
-				left: 0;
-	
-				margin-top: 1vw;
-			}
-		}
-	
-		.mce-success-response {
-			margin-top: 4vw;
-			width: 100%;
-			
-			color: $play-color-green-dark;
-	
-			font-size: 24px;
-			text-align: center;
-	
-			@include mq('tablet') {
-				position: absolute;
-				top: 100%;
-				left: 0;
-	
-				margin-top: 1vw;
+				width: 50vw;
+				margin-left: 4vw;
+				max-height: 7.3vw;
 			}
 		}
 	}
@@ -640,9 +572,8 @@ div {
 		display: flex;
 
 		margin-bottom: 1vw;
-		padding: 5vw;
+		padding: 5vw 5vw 3vw;
 
-		align-items: center;
 		justify-content: center;
 	}
 
@@ -651,90 +582,22 @@ div {
 		font-size: 5vw;
 
 		@include mq('tablet') {
+			margin-top: 1.5vw;
 			margin-bottom: 0;
 
 			font-size: 1.7vw;
 		}
 	}
 
-	input[type="email"] {
-		padding: 3vw;
+	.iframe {
 		width: 100%;
-
-		border: none;
-		border-radius: 1vw;
-		color: $play-color-blue-gray;
-
-		font-size: 4vw;
+		min-height: 7vw;
+		max-height: 18vw;
 
 		@include mq('tablet') {
-			padding: 1vw;
-			max-width: none;
-			width: 100%;
-			
-			border-radius: .5vw;
-
-			font-size: 1.7vw;
-		}
-	}
-
-	form {
-		display: flex;
-
-		align-items: center;
-	}
-
-	.button--primary {
-		margin-left: 2vw;
-	}
-
-	.mce-responses {
-		display: flex;
-		position: relative;
-
-		width: 50vw;
-
-		flex-wrap: wrap;
-
-		@include mq('tablet') {
-			width: 40vw;
-			margin-left: 2vw;
-		}
-	}
-
-	.mce-error-response {
-		margin-top: 4vw;
-		width: 100%;
-
-		color: $play-color-red;
-
-		font-size: 14px;
-		text-align: center;
-
-		@include mq('tablet') {
-			position: absolute;
-			top: 100%;
-			left: 0;
-
-			margin-top: 1vw;
-		}
-	}
-
-	.mce-success-response {
-		margin-top: 4vw;
-		width: 100%;
-		
-		color: $play-color-green-dark;
-
-		font-size: 24px;
-		text-align: center;
-
-		@include mq('tablet') {
-			position: absolute;
-			top: 100%;
-			left: 0;
-
-			margin-top: 1vw;
+			width: 50vw;
+			margin-left: 4vw;
+			max-height: 7.3vw;
 		}
 	}
 }

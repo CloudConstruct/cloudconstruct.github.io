@@ -321,64 +321,15 @@ div {
         .section--signup p {
           margin-bottom: 4vw;
           font-size: 2.5vw; } }
-    .section--signup input[type="email"] {
-      padding: 3vw;
-      width: 40vw;
-      border: none;
-      border-radius: 1vw;
-      color: #455B66;
-      font-size: 4vw; }
-      @media only screen and (min-width: 768px) {
-        .section--signup input[type="email"] {
-          padding: 1vw;
-          max-width: none;
-          width: 40vw;
-          border-radius: .5vw;
-          font-size: 2vw; } }
-    .section--signup form {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .section--signup .button--primary {
-      margin-left: 2vw; }
-    .section--signup .mce-responses {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      position: relative;
-      width: 50vw;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-      @media only screen and (min-width: 768px) {
-        .section--signup .mce-responses {
-          width: 40vw; } }
-    .section--signup .mce-error-response {
-      margin-top: 4vw;
+    .section--signup .iframe {
       width: 100%;
-      color: #CC0808;
-      font-size: 14px;
-      text-align: center; }
+      min-height: 7vw;
+      max-height: 18vw; }
       @media only screen and (min-width: 768px) {
-        .section--signup .mce-error-response {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          margin-top: 1vw; } }
-    .section--signup .mce-success-response {
-      margin-top: 4vw;
-      width: 100%;
-      color: #90F51D;
-      font-size: 24px;
-      text-align: center; }
-      @media only screen and (min-width: 768px) {
-        .section--signup .mce-success-response {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          margin-top: 1vw; } }
+        .section--signup .iframe {
+          width: 50vw;
+          margin-left: 4vw;
+          max-height: 7.3vw; } }
 
 .background-1 {
   background-image: url("../../Images/playerdise1.jpg");
@@ -523,10 +474,7 @@ div {
       display: -ms-flexbox;
       display: flex;
       margin-bottom: 1vw;
-      padding: 5vw;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
+      padding: 5vw 5vw 3vw;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; } }
@@ -535,67 +483,18 @@ div {
     font-size: 5vw; }
     @media only screen and (min-width: 768px) {
       .subscribe h3 {
+        margin-top: 1.5vw;
         margin-bottom: 0;
         font-size: 1.7vw; } }
-  .subscribe input[type="email"] {
-    padding: 3vw;
+  .subscribe .iframe {
     width: 100%;
-    border: none;
-    border-radius: 1vw;
-    color: #455B66;
-    font-size: 4vw; }
+    min-height: 7vw;
+    max-height: 18vw; }
     @media only screen and (min-width: 768px) {
-      .subscribe input[type="email"] {
-        padding: 1vw;
-        max-width: none;
-        width: 100%;
-        border-radius: .5vw;
-        font-size: 1.7vw; } }
-  .subscribe form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-  .subscribe .button--primary {
-    margin-left: 2vw; }
-  .subscribe .mce-responses {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    width: 50vw;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    @media only screen and (min-width: 768px) {
-      .subscribe .mce-responses {
-        width: 40vw;
-        margin-left: 2vw; } }
-  .subscribe .mce-error-response {
-    margin-top: 4vw;
-    width: 100%;
-    color: #CC0808;
-    font-size: 14px;
-    text-align: center; }
-    @media only screen and (min-width: 768px) {
-      .subscribe .mce-error-response {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        margin-top: 1vw; } }
-  .subscribe .mce-success-response {
-    margin-top: 4vw;
-    width: 100%;
-    color: #90F51D;
-    font-size: 24px;
-    text-align: center; }
-    @media only screen and (min-width: 768px) {
-      .subscribe .mce-success-response {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        margin-top: 1vw; } }
+      .subscribe .iframe {
+        width: 50vw;
+        margin-left: 4vw;
+        max-height: 7.3vw; } }
 
 .button--primary {
   padding: 3vw 5vw;
@@ -847,5 +746,74 @@ ul {
 a {
   color: #F5F5F5;
   text-decoration: none; }
+
+.mc-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .mc-form input[type="email"] {
+    padding: 4vw;
+    width: 100%;
+    border: none;
+    border-radius: 2vw;
+    color: #455B66;
+    font-size: 4vw; }
+    @media only screen and (min-width: 480px) {
+      .mc-form input[type="email"] {
+        padding: 3vw;
+        max-width: none;
+        width: 100%;
+        border-radius: 1vw;
+        font-size: 2.7vw; } }
+  .mc-form .button--primary {
+    margin-left: 4vw;
+    padding: 3vw 8vw;
+    border: 0.3vw solid #A6DBF5;
+    font-size: 4vw; }
+    @media only screen and (min-width: 480px) {
+      .mc-form .button--primary {
+        padding: 2vw 6vw;
+        border: 0.3vw solid #A6DBF5;
+        font-size: 2.7vw; } }
+  .mc-form .mce-responses {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 80vw;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 480px) {
+      .mc-form .mce-responses {
+        width: 70vw; } }
+  .mc-form .mce-error-response {
+    margin-top: 4vw;
+    width: 100%;
+    color: #CC0808;
+    font-size: 4vw;
+    text-align: center; }
+    @media only screen and (min-width: 480px) {
+      .mc-form .mce-error-response {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 1vw;
+        font-size: 2vw; } }
+  .mc-form .mce-success-response {
+    margin-top: 4vw;
+    width: 100%;
+    color: #90F51D;
+    font-size: 6vw;
+    text-align: center; }
+    @media only screen and (min-width: 480px) {
+      .mc-form .mce-success-response {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 1vw;
+        font-size: 4vw; } }
 
 /*# sourceMappingURL=general.css.map */

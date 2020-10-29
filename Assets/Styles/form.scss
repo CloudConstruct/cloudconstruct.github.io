@@ -1,0 +1,97 @@
+@import "_variables";
+@import "_mixins";
+
+.mc-form {
+	display: flex;
+
+	align-items: center;
+
+	input[type="email"] {
+		padding: 4vw;
+		width: 100%;
+
+		border: none;
+		border-radius: 2vw;
+		color: $play-color-blue-gray;
+
+		font-size: 4vw;
+
+		@include mq('phone-wide') {
+			padding: 3vw;
+			max-width: none;
+			width: 100%;
+			
+			border-radius: 1vw;
+
+			font-size: 2.7vw;
+		}
+	}
+
+	.button--primary {
+		margin-left: 4vw;
+		padding: 3vw 8vw;
+
+		border: 0.3vw solid #A6DBF5;
+		
+    font-size: 4vw;
+
+		@include mq('phone-wide') {
+			padding: 2vw 6vw;
+			border: 0.3vw solid #A6DBF5;
+			font-size: 2.7vw;
+		}
+	}
+
+	.mce-responses {
+		display: flex;
+		position: relative;
+
+		width: 80vw;
+
+		flex-wrap: wrap;
+
+		@include mq('phone-wide') {
+			width: 70vw;
+		}
+	}
+
+	.mce-error-response {
+		margin-top: 4vw;
+		width: 100%;
+
+		color: $play-color-red;
+
+		font-size: 4vw;
+		text-align: center;
+
+		@include mq('phone-wide') {
+			position: absolute;
+			top: 100%;
+			left: 0;
+
+			margin-top: 1vw;
+
+			font-size: 2vw;
+		}
+	}
+
+	.mce-success-response {
+		margin-top: 4vw;
+		width: 100%;
+		
+		color: $play-color-green-dark;
+
+		font-size: 6vw;
+		text-align: center;
+
+		@include mq('phone-wide') {
+			position: absolute;
+			top: 100%;
+			left: 0;
+
+			margin-top: 1vw;
+
+			font-size: 4vw;
+		}
+	}
+}
