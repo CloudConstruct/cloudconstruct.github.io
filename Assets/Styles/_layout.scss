@@ -279,6 +279,18 @@ div {
 			&.pennies {
 				color: $play-color-yellow;
 			}
+
+			&.dice {
+				color: $play-color-green;
+			}
+
+			&.bounty {
+				color: $play-color-blue-lighter;
+			}
+
+			&.twitch {
+				color: #A43EB0;
+			}
 		}
 
 		p {
@@ -339,6 +351,29 @@ div {
 			background-color: rgba($play-color-yellow, .3);
 		}
 
+		&--dice {
+			@extend .section__overlay;
+
+			z-index: 2;
+
+			background-color: rgba($play-color-green, .3);
+		}
+
+		&--bounty {
+			@extend .section__overlay;
+
+			z-index: 2;
+
+			background-color: rgba($play-color-blue-lighter, .3);
+		}
+
+		&--twitch {
+			@extend .section__overlay;
+
+			z-index: 2;
+
+			background-color: rgba(#A43EB0, .3);
+		}
 	}
 
 	&__icon {
@@ -369,6 +404,24 @@ div {
 			@extend .section__icon;
 
 			border-color: $play-color-yellow;
+		}
+
+		&--dice {
+			@extend .section__icon;
+
+			border-color: $play-color-green;
+		}
+
+		&--bounty {
+			@extend .section__icon;
+
+			border-color: $play-color-blue-lighter;
+		}
+
+		&--twitch {
+			@extend .section__icon;
+
+			border-color: #A43EB0;
 		}
 	}
 
@@ -501,6 +554,39 @@ div {
 	transform: translate(-50%, -50%);
 }
 
+.icon-dice {
+	@include dice-icon($play-color-green, 6vw, 6vw);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+
+.icon-bounty {
+	@include bounty-icon($play-color-blue-lighter, 6vw, 6vw);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+
+.icon-twitch {
+	@include twitch-icon(#A43EB0, 5vw, 5vw);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+
 
 
 .demo-dot {
@@ -631,3 +717,8 @@ div {
 		}
 	}
 }
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+  }
