@@ -525,6 +525,24 @@ div {
 	background-position: center center;
 }
 
+.background-4 {
+	background-image: url('../../Images/playerdise4.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.background-5 {
+	background-image: url('../../Images/playerdise5.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.background-6 {
+	background-image: url('../../Images/playerdise6.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
 .icon-money {
 	@include money-icon($play-color-green-dark, 5vw, 5vw);
 	position: absolute;

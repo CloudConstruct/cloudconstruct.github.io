@@ -367,6 +367,21 @@ div {
   background-size: cover;
   background-position: center center; }
 
+.background-4 {
+  background-image: url("../../Images/playerdise4.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.background-5 {
+  background-image: url("../../Images/playerdise5.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.background-6 {
+  background-image: url("../../Images/playerdise6.jpg");
+  background-size: cover;
+  background-position: center center; }
+
 .icon-money {
   display: inline-block;
   background-size: 100% auto;
