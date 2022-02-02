@@ -609,6 +609,12 @@ div {
         font-weight: 700; }
       .subscribe--contest p a {
         color: #A6DBF5; }
+      .subscribe--contest p.rules {
+        margin-bottom: 0;
+        font-size: 2vw; }
+        @media only screen and (min-width: 768px) {
+          .subscribe--contest p.rules {
+            font-size: .8vw; } }
 
 .button--primary {
   padding: 3vw 5vw;
