@@ -730,21 +730,49 @@ div {
 				margin-top: 1.5vw;
 				margin-bottom: 3vw;
 	
+				font-size: 4vw;
+			}
+
+			@include mq('desktop') {
 				font-size: 3vw;
+			}
+		}
+
+		h4 {
+			margin-top: 10vw;
+			margin-bottom: 2vw;
+
+			font-size: 5vw;
+
+			@include mq('tablet') {
+				margin-top: 1vw;
+				margin-bottom: 1vw;
+	
+				font-size: 2.5vw;
+			}
+	
+			@include mq('desktop') {
+				font-size: 1.5vw;
 			}
 		}
 
 		p {
 			margin-bottom: 4vw;
 
-			font-size: 3vw;
+			font-size: 4vw;
 			font-weight: 400;
 			line-height: 1.6;
-	
+
 			@include mq('tablet') {
-				width: 50%;
+				width: 75%;
 				margin-bottom: 2vw;
 	
+				font-size: 1.7vw;
+			}
+	
+			@include mq('desktop') {
+				width: 60%;
+
 				font-size: 1.3vw;
 			}
 
@@ -759,9 +787,13 @@ div {
 			
 			&.rules {
 				margin-bottom: 0;
-				font-size: 2vw;
-		
+				font-size: 3vw;
+
 				@include mq('tablet') {	
+					font-size: 1.2vw;
+				}
+		
+				@include mq('desktop') {	
 					font-size: .8vw;
 				}
 			}

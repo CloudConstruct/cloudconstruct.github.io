@@ -2,7 +2,7 @@
 @import "_mixins";
 
 footer {
-	padding: 4vw;
+	padding: 6vw;
 
 	background-color: $play-color-off-black;
 	color: $play-color-off-white;
@@ -10,6 +10,10 @@ footer {
 	text-align: center;
 
 	@include mq('tablet') {
+		padding: 3vw;
+	}
+
+	@include mq('desktop') {
 		padding: 1.5vw;
 	}
 
@@ -20,13 +24,25 @@ footer {
 		line-height: 1;
 
 		@include mq('tablet') {
+			font-size: 2vw;
+		}
+
+		@include mq('desktop') {
 			font-size: 1vw;
 		}
 	}
 	
 	img {
-		width: 3.5%;
+		width: 11.5%;
 		
-    		vertical-align: text-bottom;
+    	vertical-align: text-bottom;
+
+		@include mq('tablet') {
+			width: 6.5%;
+		}
+
+		@include mq('desktop') {
+			width: 3.5%;
+		}
 	}
 }
