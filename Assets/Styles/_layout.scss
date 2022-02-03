@@ -755,6 +755,16 @@ div {
 			a {
 				color: $play-color-blue-lighter;
 			}
+			
+			
+			&.rules {
+				margin-bottom: 0;
+				font-size: 2vw;
+		
+				@include mq('tablet') {	
+					font-size: .8vw;
+				}
+			}
 		}
 	}
 }
