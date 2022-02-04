@@ -9,16 +9,20 @@
 	display: flex;
 
 	width: 100%;
-	height: 9vw;
+	height: 18vw;
 
 	background-color: $play-color-off-black;
 
 	justify-content: center;
 
 	@include mq('tablet') {
-		top: $space-xxl;
+		top: 6vw;
 
 		height: 4vw;
+	}
+
+	@include mq('desktop') {
+		top: 3vw;
 	}
 
 	&__title {
@@ -30,7 +34,7 @@
 			left: -50%;
 			z-index: 6;
 			
-			width: 47vw;
+			width: 71vw;
 
 			transform: translateX(-50%);
 
